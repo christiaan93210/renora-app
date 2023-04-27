@@ -39,3 +39,7 @@ type MapItem = {
     name: string
     value: number
 }
+
+type CardProps = {
+    asset: Card
+}

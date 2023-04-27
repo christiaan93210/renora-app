@@ -1,10 +1,9 @@
-import React from "react";
 import ReactEcharts from "echarts-for-react";
 
 import { useSelector, shallowEqual } from "react-redux";
 
-import { tokenList } from ".././constants/tokenList";
- 
+import { tokenList } from "../.././constants/tokenList";
+
 const Sidebar = () => {
   let sumAssets: ISumAsset = useSelector(
     (state: AssetsState) => state.sumAssets,
@@ -21,19 +20,18 @@ const Sidebar = () => {
     value: asset.amount,
   }));
 
-  console.log(data);
-
   let option = {
     series: [
       {
         type: "treemap",
         data: data,
         breadcrumb: "false",
+        silent: true,
+        roam: false,
+        nodeClick: false,
       },
     ],
   };
-
-  console.log("option>", option);
 
   return (
     <div className="border-l-2 border-[#202835] bg-[#13182387] w-[450px] p-5 tracking-wider">
@@ -42,7 +40,9 @@ const Sidebar = () => {
       </div>
       <div className="flex flex-col gap-2 ml-[45px]">
         <div>
-          <h2 className="text-[18px]">Net worth</h2>
+          <h2 className="text-[18px]">
+            <b>Net worth</b>
+          </h2>
           <h2 className="text-[#88c0f3]">{sumAssets.netWorth} USD</h2>
         </div>
         <div>

@@ -1,4 +1,3 @@
-import React from "react";
 import SyncBtn from "./SyncBtn";
 import WebCard from "./WebCard";
 
@@ -15,7 +14,7 @@ const MainSection = () => {
       <div className="flex flex-row-reverse border-b-2 border-[#202835]">
         <SyncBtn />
       </div>
-      <div className="mt-3">
+      <div className="mt-3 bg-[#0c1119ab] p-8 rounded-2xl">
         <table className="w-[100%] p-3 border-separate">
           <tbody>
             <tr className="text-[#6c86ad] font-mono text-right">
@@ -26,7 +25,7 @@ const MainSection = () => {
               <th>Total P&L</th>
             </tr>
             {assets.map((asset, index) => (
-              <WebCard card={asset} key={index} />
+              <WebCard asset={asset} key={index} />
             ))}
           </tbody>
         </table>
