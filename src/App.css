@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-    background: linear-gradient(to top right, #06070a 6%, #3366cc 100%);
-    color: white;
-    height: 100vh;
-    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  background: linear-gradient(to top right, #06070a 6%, #3366cc 100%);
+  color: white;
+  height: 100vh;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
